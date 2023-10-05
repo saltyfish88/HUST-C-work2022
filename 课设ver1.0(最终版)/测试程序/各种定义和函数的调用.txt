@@ -1,0 +1,24 @@
+/* 各种定义和函数的调用 */
+#include<stdio.h>
+#include<stdlib.h>
+#define A 10
+#define F(a,b) a+b
+int func1(int a,int b);
+int func2(int a,int b)
+{return b+a;}
+int main()
+{
+int i=0,j=0,k;
+float m=0.5;
+double n;
+int*p=&i;
+int*q;
+int arr[15];
+k=func1(i,j)+func2(i,j);
+return 0;
+}
+int func1(int a,int b)
+{
+int c=a+b;
+return c;
+}

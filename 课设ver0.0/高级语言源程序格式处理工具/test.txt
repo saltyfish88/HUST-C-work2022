@@ -1,0 +1,29 @@
+#include <stdio.h>
+int painter[2001], paint[1000001];
+int main()
+{
+    int m, n, count=0, i=1, j=0,a,b;
+    int top = 1000001;
+    scanf("%d %d", &n, &m);
+    for (i = 1; i <= n; i++) {
+        scanf("%d", paint+i);
+    }
+i = 1;
+     a = 1;
+     b = n;
+     while (i <= n) {
+         while (count < m && j < n) {
+             j++;
+             if (painter[paint[j]] == 0) { count++; }
+             painter[paint[j]]++;
+         }
+         painter[paint[i]]--;
+         if (painter[paint[i]] == 0) { count--; }
+         i++;
+         if (1 + j - i < top && count == m) {
+              a = i, b = j, top = j + 1 - i;
+         }
+     }
+     printf("%d %d\n", a, b);
+     return 0;
+}

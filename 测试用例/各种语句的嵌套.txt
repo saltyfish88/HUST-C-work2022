@@ -1,0 +1,64 @@
+/* 各种表达式的嵌套 */
+#include<stdio.h>
+int main()
+{int i=0,j=0,k=0;
+//if
+if(i==0)
+{
+	if(j==0)
+	{
+		k=0;
+	}
+	k=0;
+}
+if(j==0){k=0;}
+else if(j!=0){k=0;}
+else{j=0;}
+//while
+while(i!=0)
+{
+	while(j!=0)
+	{
+		k=0;
+	}
+	k=0;
+}
+while(j!=0){k=0;}
+//for
+for(i=0;i<2;i++)
+{
+	for(int m=4;m>2;m--)
+	{
+		i=0;
+		continue;
+	}
+}
+for(i=0;i<=2;i++){i=0;}
+//do-while
+do
+{
+	do
+	{
+		k=0;
+	}while(j!=0);
+	k=0;
+}while(i!=0);
+do{k=0;}
+while(j!=0);
+//switch-case
+switch(i)
+{
+	case 1:
+		i=0;
+		break;
+	case 2:
+		i=1;
+		break;
+	case 3:
+		switch(i){case 1:break;}
+	default:
+		break;
+}
+switch(i){case 1:break;}
+return 0;
+}
